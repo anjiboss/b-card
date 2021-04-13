@@ -1,7 +1,8 @@
 <?php
+include("../common/common.inc.php");
 
 $servername = "localhost";
-$username = "root";
+$username = "h2s";
 $password = "2670875";
 $dbname = "bcard";
 
@@ -11,6 +12,7 @@ if (!$conn) {
   die("connected failed");
 }
 
-echo "<script>console.log('Connected')</script>";
+
+cLog("Connected");
 
 ?>
