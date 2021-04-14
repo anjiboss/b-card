@@ -1,5 +1,4 @@
 <?php
-include("../common/common.inc.php");
 
 $servername = "localhost";
 $username = "h2s";
@@ -12,7 +11,6 @@ if (!$conn) {
   die("connected failed");
 }
 
-
-cLog("Connected");
+// cLog("Connected");
 
 ?>
