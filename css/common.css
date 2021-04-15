@@ -190,3 +190,32 @@ p {
   background: var(--clr-primary-1);
   color: var(--clr-primary-5);
 }
+
+.form {
+  background: var(--clr-white);
+  max-width: var(--fixed-width);
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+}
+.form input[type="text"] {
+  background: var(--clr-grey-10);
+  border-color: transparent;
+  border-radius: var(--radius);
+  padding: 0.25rem 0.5rem;
+}
+.form input[type="file"] {
+  background: var(--clr-grey-10);
+  border-color: transparent;
+  border-radius: var(--radius);
+  
+}
+.form input[type="submit"] {
+  background: var(--clr-green-dark);
+  display: block;
+  width: 10rem;
+  margin-top: 30px;
+  border-radius: var(--radius);
+  outline: none;
+}
