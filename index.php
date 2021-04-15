@@ -16,7 +16,10 @@
         case 'noUserId':
           echo "<p>You did not provided user id</p>";
           break;
-        
+        case "uploadError":
+          echo "<p>Upload Error</p>";
+          break;
+            
         default:
           # code...
           break;
@@ -39,7 +42,7 @@
 <script >
   const profileNav = () => {
     id= $("#id-input").val();
-    window.location.href = "/user.php?id=" + id;
+    window.location.href = "http://localhost/b-card/user.php?id=" + id;
   }
 </script>
 </html>
