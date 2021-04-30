@@ -1,8 +1,7 @@
-<?php
-  include("common/common.inc.php");
-  include("controller/db.php");
-  include("controller/fetchUser.php");
-?>
+<!-- <?php
+  // include("controller/db.php");
+  // include("controller/fetchUser.php");
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +14,9 @@
 </head>
 <body>
   <?php
-    $formId = "";
+  // require_once("./include/import.php");
+
+   $formId = "";
     $user="";
     if (isset($_GET["id"])) {
       $hasAcc = "true";

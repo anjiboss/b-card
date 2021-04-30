@@ -16,10 +16,12 @@
 </head>
 <body>
   <?php
+
     if (!isset($_GET["id"])){
       header("Location: index.php?error=noUserId");
     }else {
       $user = json_encode(fetchUser($conn, $_GET["id"]));
+      cLog($_GET["id"]);
       echo "<div class='container'></div>";
     }
   ?>

@@ -11,6 +11,9 @@
 <body>
   <h1>B-card</h1>
   <?php
+    require("./include/header.php");
+    require_once("./import.php");
+
     if (isset($_GET["error"])) {
       switch ($_GET["error"]) {
         case 'noUserId':
@@ -42,7 +45,7 @@
 <script >
   const profileNav = () => {
     id= $("#id-input").val();
-    window.location.href = "http://localhost/b-card/user.php?id=" + id;
+    window.location.href = "http://localhost:3000/user.php?id=" + id;
   }
 </script>
 </html>
