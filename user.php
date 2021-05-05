@@ -16,11 +16,12 @@
 </head>
 <body>
   <?php
-  include("./include/header.php");
+    include("./include/header.php");
 
     if (!isset($_GET["id"])){
       header("Location: index.php?error=noUserId");
-    }else {
+    }else{
+
       $user = json_encode(fetchUser($conn, $_GET["id"]));
       cLog($_GET["id"]);
       echo "<div class='container'></div>";

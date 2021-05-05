@@ -6,7 +6,8 @@
 
   $splitedFileName = explode(".",$_FILES["avatar"]["name"]);
   $fileExt = $splitedFileName[count($splitedFileName) - 1];
-  $targetFile = "images/" . $name . "_avatar.". $fileExt;
+  $replaceName = str_replace(" ", "_", $name);
+  $targetFile = "images/" . $replaceName . "_avatar.". $fileExt;
 
   if (move_uploaded_file($_FILES["avatar"]["tmp_name"], "../". $targetFile)) {
       if (isset($_GET["id"])){
