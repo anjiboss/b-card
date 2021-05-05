@@ -9,7 +9,6 @@
   <title>B-card</title>
 </head>
 <body>
-  <h1>B-card</h1>
   <?php
     require("./include/header.php");
     require_once("./import.php");
@@ -22,7 +21,9 @@
         case "uploadError":
           echo "<p>Upload Error</p>";
           break;
-            
+        case "WrongID":
+          echo "<p>No User With Your Inputed Id</p>";
+          break;
         default:
           # code...
           break;
@@ -45,7 +46,7 @@
 <script >
   const profileNav = () => {
     id= $("#id-input").val();
-    window.location.href = "http://localhost:3000/user.php?id=" + id;
+    window.location.href = "http://localhost:4000/user.php?id=" + id;
   }
 </script>
 </html>

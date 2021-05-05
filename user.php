@@ -16,6 +16,7 @@
 </head>
 <body>
   <?php
+  include("./include/header.php");
 
     if (!isset($_GET["id"])){
       header("Location: index.php?error=noUserId");
@@ -28,10 +29,17 @@
   
   <script>
     let user = '<?php echo $user ?>';
+    
     if (user) {
       user = JSON.parse(user);
-      console.log(user)
+      console.log(user);
+      if (user.id === undefined){
+       window.location.href = "/index.php?error=WrongID";
+      }else {
       userCard(user);
+      }
+    }else {
+      console.log("Error Occured");
     }
   </script>
 </body>

@@ -77,8 +77,20 @@ body {
   font-size: 0.875rem;
   padding-bottom: 3vh;
 }
+header {
+  width: 100vw;
+  height: 10vh;
+}
 ul {
   list-style-type: none;
+}
+
+header ul {
+  list-style-type: none;
+  display: flex;
+}
+header li {
+  width: 20%;
 }
 a {
   text-decoration: none;
@@ -108,6 +120,7 @@ p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -209,7 +222,6 @@ p {
   background: var(--clr-grey-10);
   border-color: transparent;
   border-radius: var(--radius);
-  
 }
 .form input[type="submit"] {
   background: var(--clr-green-dark);
@@ -218,4 +230,20 @@ p {
   margin-top: 30px;
   border-radius: var(--radius);
   outline: none;
+}
+
+.link {
+  display: inline-block;
+  background: var(--clr-primary-5);
+  border-radius: var(--radius);
+  border-color: transparent;
+  text-transform: capitalize;
+  font-size: 1rem;
+  letter-spacing: var(--spacing);
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  outline: none;
+  color: hsl(12, 83%, 98%);
+  padding: 0.25rem 0.75rem;
 }

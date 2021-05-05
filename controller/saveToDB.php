@@ -23,12 +23,12 @@
         }else {
           $lastId = mysqli_insert_id($conn);
         }
-        header("Location: http://localhost:3000/user.php?id=" . $lastId);
+        header("Location: http://localhost:4000/user.php?id=" . $lastId);
       } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
     } else {
-    header("Location: http://localhost:3000/index.php?error=uploadError");
+    header("Location: http://localhost:4000/index.php?error=uploadError");
   }
 
 ?>

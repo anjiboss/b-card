@@ -15,7 +15,7 @@
 <body>
   <?php
   // require_once("./include/import.php");
-
+  include("./include/header.php");
    $formId = "";
     $user="";
     if (isset($_GET["id"])) {

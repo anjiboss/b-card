@@ -7,7 +7,7 @@ function fetchUser($conn, $userId){
     $row = mysqli_fetch_assoc($result);
     return $row;
  } else {
-  echo "0 results";
+   return "[]";
 }
 };
 
