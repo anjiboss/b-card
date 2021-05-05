@@ -21,7 +21,7 @@
   <form action="controller/saveToDB.php?" class="form" enctype="multipart/form-data" method="post">
     <input type="text" name="name" placeholder="Name"autocomplete="off" id="form-name">
     <input type="text" name="info" placeholder="Infomations" id="form-info">
-    <!-- <input type="password"placeholder="Password" name="pwd" id="form-pwd"> -->
+    <input type="password"placeholder="Password" name="pwd" id="form-pwd">
     <input type="file" name="avatar" id="avatar">
     <input type="submit" value="Upload Profile" name="submit">
   </form>
