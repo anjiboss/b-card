@@ -10,10 +10,10 @@
 
   if (move_uploaded_file($_FILES["avatar"]["tmp_name"], "../". $targetFile)) {
       if (isset($_GET["id"])){
-        $sql = "UPDATE users SET name='$name',Info='$info',image_dir='$targetFile' WHERE id='".$_GET["id"]."';";
+        $sql = "UPDATE users SET name='$name',info='$info',image_dir='$targetFile' WHERE id='".$_GET["id"]."';";
         $update = true;
       }else{
-        $sql = "INSERT INTO users (name, Info, image_dir) VALUES ('$name', '$info', '$targetFile');";
+        $sql = "INSERT INTO users (name, info, image_dir) VALUES ('$name', '$info', '$targetFile');";
         $update = false;
       }
   

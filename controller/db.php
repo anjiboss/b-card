@@ -2,7 +2,7 @@
 
 
 $servername = "localhost";
-$username = "h2s";
+$username = "xd875684_admin";
 $password = "2670875";
 $dbname = "bcard";
 
