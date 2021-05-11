@@ -18,10 +18,11 @@
   include("./include/header.php");
   
   ?>
-  <form action="controller/saveToDB.php?" class="form" enctype="multipart/form-data" method="post">
-    <input type="text" name="name" placeholder="Name"autocomplete="off" id="form-name">
+  <form action="controller/saveToDB.php" class="form" enctype="multipart/form-data" method="post">
+    <input type="text" name="name" placeholder="Name"autocomplete="off" id="form-name"><br>
+    <input type="password"placeholder="Password" name="pwd" id="form-pwd"><br>
+    <input type="password"placeholder="Re-Password" name="rePwd" id="form-pwd"><br>
     <input type="text" name="info" placeholder="Infomations" id="form-info">
-    <input type="password"placeholder="Password" name="pwd" id="form-pwd">
     <input type="file" name="avatar" id="avatar">
     <input type="submit" value="Upload Profile" name="submit">
   </form>

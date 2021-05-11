@@ -3,11 +3,21 @@
 
   $name = $_POST["name"];
   $info = $_POST["info"];
+  $pwd = $_POST["pwd"];
+  $rePwd = $_POST["rePwd"];
+
+  if ($pwd != $rePwd) {
+    header("Location http://localhost:4000/info-register.php?")
+  }
+
+  $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
+
 
   $splitedFileName = explode(".",$_FILES["avatar"]["name"]);
   $fileExt = $splitedFileName[count($splitedFileName) - 1];
   $replaceName = str_replace(" ", "_", $name);
   $targetFile = "images/" . $replaceName . "_avatar.". $fileExt;
+
 
   if (move_uploaded_file($_FILES["avatar"]["tmp_name"], "../". $targetFile)) {
       if (isset($_GET["id"])){
