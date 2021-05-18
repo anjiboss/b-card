@@ -11,7 +11,7 @@
 <body>
   <?php
     require("./include/header.php");
-    require_once("./import.php");
+    require("./import.php");
 
     if (isset($_GET["error"])) {
       switch ($_GET["error"]) {
@@ -46,7 +46,7 @@
 <script >
   const profileNav = () => {
     id= $("#id-input").val();
-    window.location.href = "http://localhost:4000/user.php?id=" + id;
+    window.location.href = "/user.php?id=" + id;
   }
 </script>
 </html>

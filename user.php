@@ -1,7 +1,15 @@
 <?php
-  include("common/common.inc.php");
+  // include("common/common.inc.php");
   include("./controller/db.php");
   include("./controller/fetchUser.php");
+
+  if (!isset($_GET["id"])){
+    header("Location: index.php?error=noUserId");
+  }else{
+
+    $user = json_encode(fetchUser($conn, $_GET["id"]));
+    // cLog($_GET["id"]);
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,15 +25,7 @@
 <body>
   <?php
     include("./include/header.php");
-
-    if (!isset($_GET["id"])){
-      header("Location: index.php?error=noUserId");
-    }else{
-
-      $user = json_encode(fetchUser($conn, $_GET["id"]));
-      cLog($_GET["id"]);
-      echo "<div class='container'></div>";
-    }
+    echo "<div class='container'></div>";
   ?>
   
   <script>

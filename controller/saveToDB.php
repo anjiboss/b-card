@@ -7,7 +7,7 @@
   $rePwd = $_POST["rePwd"];
 
   if ($pwd != $rePwd) {
-    header("Location http://localhost:4000/info-register.php?")
+    header("Location /info-register.php?");
   }
 
   $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
@@ -34,12 +34,12 @@
         }else {
           $lastId = mysqli_insert_id($conn);
         }
-        header("Location: http://localhost:4000/user.php?id=" . $lastId);
+        header("Location: /user.php?id=" . $lastId);
       } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
     } else {
-    header("Location: http://localhost:4000/index.php?error=uploadError");
+    header("Location: /index.php?error=uploadError");
   }
 
 ?>
